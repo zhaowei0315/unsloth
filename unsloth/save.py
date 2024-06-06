@@ -102,7 +102,7 @@ def check_if_sentencepiece_model(model, temporary_location = "_unsloth_sentencep
     if os.path.isfile(f"{file_location}/tokenizer.model"):
         sentencepiece_model = True
     pass
-    shutil.rmtree(file_location)
+    shutil.rmtree(file_location, ignore_errors=True)
     return sentencepiece_model
 pass
 
